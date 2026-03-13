@@ -10,4 +10,4 @@ Overall objectives:
 - Linker
 
 ## Notes
-- Notes on the topics done will be found in the file (notes.md)[notes.md]
+- Notes on the topics done will be found in the file [notes.md](notes.md)
