@@ -17,12 +17,16 @@ has more than one core
 
 //first function to print 250 heys
 void function1(std::string word){
-    std::cout << word;
+    for(int i=1; i<= 250; i++) {
+        std::cout << word;
+    }
 }
 
 //second prints yows
 void function2(){
-    std::cout << "Yow";
+    for(int i=1; i<= 250; i++) {
+        std::cout << "Yow";
+    }
 }
 
 int main() {
@@ -33,6 +37,9 @@ int main() {
     //second thread
     std::thread worker2(function2);
 
-    system("pause>nul");
-    //return 0;
+    //windows way system("pause>nul");
+
+    std::cin.get();
+
+    return 0;
 }

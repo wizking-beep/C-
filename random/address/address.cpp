@@ -2,9 +2,9 @@
 #include <vector>
 #include <string>
 
-void checkAddress(std::vector<int>);
+void checkAddress(const std::vector<int> &numbers);
 void checkAddress(std::string);
-void checkAddress(int);
+void checkAddress(int *number);
 void checkAddress(char letters[5]);
 
 
@@ -16,12 +16,13 @@ int main() {
     checkAddress(name);
 
     int number = 30;
-    int *age = &number;
+    /*int *age = &number;
 
     std::cout << "The address for number is: " << age << std::endl;
     std::cout << "The address for age is: " << &age << std::endl;
     std::cout << "The value for age is: " << *age << std::endl;
-    //checkAddress(*age);
+    */
+    checkAddress(&number);
 
     char letters[5] = {'H', 'e', 'l', 'l', 'o'};
     checkAddress(letters);
@@ -29,18 +30,21 @@ int main() {
     return 0;
 }
 
-void checkAddress(std::vector<int> numbers){
-    std::cout << numbers[1] << std::endl;
+void checkAddress(const std::vector<int> &numbers){
+    //lets check the address of the vector
+    for(auto number : numbers){
+         std::cout << number << std::endl;
+    }
 }
 
 void checkAddress(std::string name){
-    std::cout << name << std::endl;
+    std::cout << "This is the address for the string: " << name << std::endl;
 }
 
-void checkAddress(int age){
-    std::cout << age << std::endl;
+void checkAddress(int *age){
+    std::cout << "This is the address for age: " << age << std::endl;
 }
 
 void checkAddress(char letters[5]){
-    std::cout << letters[1] << std::endl;
+    std::cout << "THis is the address for fixed array: " << letters[1] << std::endl;
 }

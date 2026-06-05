@@ -16,3 +16,6 @@ Proper freeing up of the memory used needs to be implemented after the
 use of a particular memory space.
 
 ## Automatic vs dynamic storage duration
+
+
+## Compilation pipeline
